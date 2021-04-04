@@ -4,6 +4,7 @@ import {createSelector} from 'reselect';
 import {makeSelectUsers} from './selectors';
 import Axios from 'axios';
 import {setUsers} from './actions';
+import { UsersList } from './usersList';
 
 const stateSelector = createSelector(makeSelectUsers, (users) => ({
     users
@@ -26,6 +27,6 @@ const {setUsers} = actionDispatch(useDispatch());
   }, []);
 console.log('users: ', users);
 return <div>
-        buenaaaaas
+        <UsersList />
     </div>
 }
